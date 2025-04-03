@@ -1,4 +1,4 @@
-package `1week`
+package Algorithms.`1week`
 
 fun main() {
     val array = intArrayOf(45, 20, 60, 35, 10, 55, 90, 85, 75, 25)

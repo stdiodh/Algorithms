@@ -1,4 +1,4 @@
-package `2week`
+package Algorithms.`2week`
 
 fun main(){
     fun gcdRecursive(a : Int, b : Int) : Int {

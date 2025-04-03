@@ -1,4 +1,4 @@
-package `1week`
+package Algorithms.`1week`
 
 import java.io.StreamTokenizer
 
