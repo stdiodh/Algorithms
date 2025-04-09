@@ -45,9 +45,7 @@ fun main() {
     }
 
     while (true) {
-        val result = input() ?: continue
-        val n = result.n
-        val m = result.m
+        val (n, m) = input() ?: continue
 
         if (n == "CLOSE") {
             break
