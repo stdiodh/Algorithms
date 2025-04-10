@@ -25,7 +25,6 @@ fun main() {
 
     println("입력을 종료하려면 빈 줄을 입력하세요.")
 
-    // 입력 받기
     while (true) {
         val line = scanner.nextLine()
         if (line.isBlank()) break
@@ -51,21 +50,18 @@ fun main() {
     val currentUsers = mutableListOf<User>()
     var nextAvailableTime = LocalTime.MIN
 
-    // ⬇️ 입장 가능 시간까지 포함한 타임라인
     val allTimes = (users.flatMap { listOf(it.enterTime, it.exitTime) } +
             users.map { it.exitTime.plusMinutes(1) })
         .distinct()
         .sorted()
 
     for (currentTime in allTimes) {
-        // 퇴장 처리
         val exited = currentUsers.filter { it.exitTime == currentTime }
         if (exited.isNotEmpty()) {
             currentUsers.removeAll(exited)
             nextAvailableTime = currentTime.plusMinutes(1)
         }
 
-        // 현재 시간에 도착한 유저
         val arrivals = users.filter { it.enterTime == currentTime }.sortedBy { it.number }
 
         for (user in arrivals) {
@@ -78,7 +74,6 @@ fun main() {
             }
         }
 
-        // 대기열 입장 처리
         while (currentUsers.size < 5 && waitingQueue.isNotEmpty() && currentTime >= nextAvailableTime) {
             val nextUser = waitingQueue.poll()
             currentUsers.add(nextUser)
