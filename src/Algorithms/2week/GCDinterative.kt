@@ -1,6 +1,10 @@
 package Algorithms.`2week`
 
-fun main(){
+import java.io.StreamTokenizer
+
+fun main() = with(StreamTokenizer(System.`in`.bufferedReader())){
+    fun nextInt() : Int { nextToken(); return nval.toInt() }
+
     fun gcdRecursive(a : Int, b : Int) : Int {
         if(b == 0){
             return a
@@ -8,8 +12,11 @@ fun main(){
         return gcdRecursive(b, a % b)
     }
 
-    val num1 = 24
-    val num2 = 14
+    val n = nextInt(); val m = nextInt()
 
-    print("최대공약수 : ${gcdRecursive(num1, num2)}")
+    val gcd = gcdRecursive(n, m)
+    val lcm = n * m / gcd
+
+    println(gcd)
+    println(lcm)
 }
