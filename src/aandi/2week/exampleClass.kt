@@ -1,7 +1,5 @@
 package aandi.`2week`
 
-import java.util.LinkedList
-
 class Human (
     // 생성자
     private val name: String, private val age: Int
