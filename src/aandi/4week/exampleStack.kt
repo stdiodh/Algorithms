@@ -4,7 +4,8 @@ fun main(){
     val a = 10
     val b = 20
     val sum = add(a, b)
-    print(sum)
+    println(sum)
+    println(System.identityHashCode(a))
 }
 
 fun add(a:Int, b:Int) : Int {
