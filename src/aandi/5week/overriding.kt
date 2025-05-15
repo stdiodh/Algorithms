@@ -6,13 +6,21 @@ open class Parent {
     }
 }
 
-class Text1 : Parent(){
+class Child1 : Parent(){
     override fun textPrint() {
-        print("오버라이딩 텍스트 1")
+        println("오버라이딩된 텍스트 1")
+    }
+}
+
+class Child2 : Parent(){
+    override fun textPrint() {
+        println("오버라이딩된 텍스트 2")
     }
 }
 
 fun main(){
-    val text : Parent = Text1()
-    text.textPrint() // 오버라이딩 텍스트 1
+    val text1 : Parent = Child1()
+    val text2 : Parent = Child2()
+    text1.textPrint() // 오버라이딩된 텍스트 1
+    text2.textPrint() // 오버라이딩된 텍스트 2
 }
