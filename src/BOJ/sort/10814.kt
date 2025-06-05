@@ -7,8 +7,15 @@ fun main() = with(StreamTokenizer(System.`in`.bufferedReader())){
     fun nextInt() : Int { nextToken(); return nval.toInt() }
 
     val n = nextInt()
-    val map = Array<Pair<Int, String>>(n){ Pair(nextInt(), next()) }
-    val mapSort = map.sortedBy { it.first }
+    val map = Array(201){ StringBuilder() }
+    repeat(n){
+        val age = nextInt(); val name = next()
+        map[age].appendLine("$age $name")
+    }
 
-    mapSort.forEach{ println("${it.first} ${it.second}") }
+    val sb = StringBuilder()
+    map.forEach {
+        sb.append(it)
+    }
+    print(sb)
 }
