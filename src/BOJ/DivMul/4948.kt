@@ -40,7 +40,7 @@ import kotlin.math.sqrt
 //    }
 //}
 
-//메모리 개선
+//메모리 개선 (제곱근 까지만 계산해도 되는데 끝까지 연산했기 때문에 메모리가 늘어났음.)
 fun main() = with(StreamTokenizer(System.`in`.bufferedReader())){
     fun nextInt() : Int { nextToken(); return nval.toInt() }
 
@@ -49,7 +49,7 @@ fun main() = with(StreamTokenizer(System.`in`.bufferedReader())){
     val sb = StringBuilder()
 
     for(i in 2 .. sqrt(123456f * 2).toInt()){
-        if(arr[i]) continue
+        if(i % 2 == 0) arr[i] = true
         for(j in i+i .. 123456 * 2 step i){
             arr[j] = true
         }
@@ -58,6 +58,10 @@ fun main() = with(StreamTokenizer(System.`in`.bufferedReader())){
     while(true){
         val n = nextInt()
         if(n == 0) break
+        if(n == 1) {
+            sb.appendLine(1)
+            continue
+        }
         var cnt = 0
         for(i in n+1 .. n*2){
             if(!arr[i]){
