@@ -1,4 +1,4 @@
-package BOJ.DP
+package BOJ.sort
 
 import java.io.StreamTokenizer
 
