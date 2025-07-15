@@ -1,4 +1,4 @@
-package Algorithms.`1week`
+package Programmers.Lv0.Kotlin
 
 import java.io.StreamTokenizer
 
