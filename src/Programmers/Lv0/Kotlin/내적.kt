@@ -1,4 +1,4 @@
-package Programmers.Lv1
+package Programmers.Lv0.Kotlin
 
 class `내적` {
     fun solution(a: IntArray, b: IntArray): Int {

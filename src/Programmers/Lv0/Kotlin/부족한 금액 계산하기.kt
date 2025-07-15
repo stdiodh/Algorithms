@@ -1,4 +1,4 @@
-package Programmers.Lv1
+package Programmers.Lv0.Kotlin
 
 import kotlin.math.abs
 

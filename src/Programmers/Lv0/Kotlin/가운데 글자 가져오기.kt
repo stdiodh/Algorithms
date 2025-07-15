@@ -1,4 +1,4 @@
-package Programmers.Lv1
+package Programmers.Lv0.Kotlin
 
 class `가운데글자가져오기` {
     fun solution(s: String): String {
@@ -13,6 +13,6 @@ class `가운데글자가져오기` {
 }
 
 fun main(){
-    val n = 가운데글자가져오기()
+    val n = Programmers.Lv0.Kotlin.가운데글자가져오기()
     println(n.solution("qwer"))
 }

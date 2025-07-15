@@ -1,4 +1,4 @@
-package Programmers.Lv1
+package Programmers.Lv0.Kotlin
 
 class `크기가작은부분문자열` {
     fun solution(t: String, p: String): Int {

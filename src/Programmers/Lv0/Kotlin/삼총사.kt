@@ -1,4 +1,4 @@
-package Programmers.Lv1
+package Programmers.Lv0.Kotlin
 
 class 삼총사 {
     fun solution(number: IntArray): Int {

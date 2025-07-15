@@ -1,4 +1,4 @@
-package Programmers.Lv1
+package Programmers.Lv0.Kotlin
 
 class `약수의개수의덧셈` {
     fun solution(left: Int, right: Int): Int {

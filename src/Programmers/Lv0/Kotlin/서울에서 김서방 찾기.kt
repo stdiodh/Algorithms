@@ -1,4 +1,4 @@
-//package Programmers.Lv1
+package Programmers.Lv0.Kotlin//package Programmers.Lv1
 //
 //class `서울에서김서방찾기` {
 //    fun solution(seoul: Array<String>): String {

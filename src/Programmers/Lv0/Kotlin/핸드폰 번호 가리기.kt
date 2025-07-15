@@ -1,4 +1,4 @@
-package Programmers.Lv1
+package Programmers.Lv0.Kotlin
 
 class `핸드폰번호가리기` {
     fun solution(phone_number: String): String {

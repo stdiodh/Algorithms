@@ -1,4 +1,4 @@
-package Programmers.Lv1
+package Programmers.Lv0.Kotlin
 
 class `가장가까운같은글자` {
     fun solution(s: String): IntArray {

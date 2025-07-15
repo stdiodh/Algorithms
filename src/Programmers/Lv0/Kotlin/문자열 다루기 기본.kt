@@ -1,4 +1,4 @@
-package Programmers.Lv1
+package Programmers.Lv0.Kotlin
 
 class `문자열다루기기본` {
     fun solution(s: String): Boolean {

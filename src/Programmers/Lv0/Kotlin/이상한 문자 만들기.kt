@@ -1,4 +1,4 @@
-package Programmers.Lv1
+package Programmers.Lv0.Kotlin
 
 class `이상한문자만들기` {
     fun solution(s: String): String {

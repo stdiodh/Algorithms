@@ -1,4 +1,4 @@
-package Programmers.Lv1
+package Programmers.Lv0.Kotlin
 
 class `행렬의 덧셈` {
     fun solution(arr1: Array<IntArray>, arr2: Array<IntArray>): Array<IntArray> {

@@ -1,4 +1,4 @@
-package Programmers.Lv1
+package Programmers.Lv0.Kotlin
 
 class `콜라츠추측` {
     fun solution(num: Int): Int {

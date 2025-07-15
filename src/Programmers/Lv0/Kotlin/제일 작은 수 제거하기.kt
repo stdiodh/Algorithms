@@ -1,4 +1,4 @@
-package Programmers.Lv1
+package Programmers.Lv0.Kotlin
 
 class `제일작은수제거하기` {
     fun solution(arr: IntArray): IntArray {
