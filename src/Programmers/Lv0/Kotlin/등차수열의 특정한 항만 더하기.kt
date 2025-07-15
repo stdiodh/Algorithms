@@ -1,4 +1,5 @@
 package Programmers.Lv0.Kotlin
+
 class `등차수열의특정한항만더하기` {
     fun solution(a: Int, d: Int, included: BooleanArray): Int {
         var cnt = a
