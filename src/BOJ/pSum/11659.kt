@@ -5,18 +5,16 @@ import java.io.StreamTokenizer
 fun main() = with(StreamTokenizer(System.`in`.bufferedReader())){
     fun i() : Int { nextToken(); return nval.toInt() }
 
-    val n = i(); val m = i();
-    val sb = StringBuilder()
-
+    val n = i(); val m = i()
     val pSum = IntArray(n+1) { 0 }
-    for(i in 0 until n){
-        pSum[i+1] = pSum[i] + i()
+    val sb = StringBuilder()
+    repeat(n){
+        pSum[it+1] = pSum[it] + i()
     }
 
     repeat(m){
-        val a = i(); val b = i()
-        sb.appendLine(pSum[b] - pSum[a-1])
+        val q1 = i(); val q2 = i()
+        sb.appendLine(pSum[q2] - pSum[q1-1])
     }
-
     print(sb)
 }
