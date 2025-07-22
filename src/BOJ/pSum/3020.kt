@@ -72,8 +72,8 @@ fun main() = with(StreamTokenizer(System.`in`.bufferedReader())) {
     //1
     val n = i()
     val h = i()
-    val bottom = IntArray(h + 2)
-    val top = IntArray(h + 2)
+    val bottom = IntArray(h + 1)
+    val top = IntArray(h + 1)
 
     //2
     repeat(n) { idx ->
@@ -86,7 +86,7 @@ fun main() = with(StreamTokenizer(System.`in`.bufferedReader())) {
     }
 
     //3
-    for (i in h downTo 1) {
+    for (i in h - 1 downTo 1) {
         bottom[i] += bottom[i + 1]
         top[i] += top[i + 1]
     }
