@@ -2,16 +2,12 @@ package BOJ.hash
 
 class Solution {
     fun solution(clothes: Array<Array<String>>): Int {
-        var answer = 0
-        val hash = mutableListOf<HashMap<String, String>>()
-
-        for((name, wear) in clothes){
-            hash.add(hashMapOf(wear to name))
-        }
-
-        println(hash)
-
-
-        return answer
+        /**
+         * groupBy로 카테고리별로 묶기
+         * 이후 총 갯수와 values의 size + 1을 더한 것에 곱이 Com 일테니
+         * 거기에 1을 빼줘서 (최소 하루의 의상을 입지 않음으로)
+         * 값을 출력해준다.
+         */
+        return clothes.groupBy { it[1] }.values.fold(1) { total, values -> total * (values.size + 1)} - 1
     }
 }
