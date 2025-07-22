@@ -22,6 +22,6 @@ class `진법뒤집기` {
 }
 
 fun main(){
-    val n = Programmers.Kotlin.진법뒤집기()
+    val n = 진법뒤집기()
     println(n.solution(45))
 }

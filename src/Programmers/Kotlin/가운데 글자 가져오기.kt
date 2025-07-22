@@ -13,6 +13,6 @@ class `가운데글자가져오기` {
 }
 
 fun main(){
-    val n = Programmers.Lv0.Kotlin.가운데글자가져오기()
+    val n = 가운데글자가져오기()
     println(n.solution("qwer"))
 }
