@@ -1,6 +1,6 @@
 package BOJ.hash
 
-class Solution {
+class Clothes {
     fun solution(clothes: Array<Array<String>>): Int {
         /**
          * groupBy로 카테고리별로 묶기
