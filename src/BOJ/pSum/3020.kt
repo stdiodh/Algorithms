@@ -64,51 +64,84 @@ package BOJ.pSum
  * 5. 구한 값을 출력한다.
  */
 
+//import java.io.StreamTokenizer
+//
+//fun main() = with(StreamTokenizer(System.`in`.bufferedReader())) {
+//    fun i(): Int { nextToken(); return nval.toInt() }
+//
+//    //1
+//    val n = i()
+//    val h = i()
+//    val bottom = IntArray(h + 1)
+//    val top = IntArray(h + 1)
+//
+//    //2
+//    repeat(n) { idx ->
+//        val num = i()
+//        if (idx % 2 == 0) {
+//            bottom[num]++
+//        } else {
+//            top[num]++
+//        }
+//    }
+//
+//    //3
+//    for (i in h - 1 downTo 1) {
+//        bottom[i] += bottom[i + 1]
+//        top[i] += top[i + 1]
+//    }
+//
+//    //4
+//    var min = Int.MAX_VALUE
+//    var count = 0
+//    for (height in 1..h) {
+//        val crush = bottom[height] + top[h - height + 1] // 현재 높이에서 충돌하는 장애물 수
+//
+//        when {
+//            crush < min -> {
+//                min = crush
+//                count = 1
+//            }
+//
+//            crush == min -> {
+//                count++
+//            }
+//        }
+//    }
+//
+//    //5
+//    println("$min $count")
+//}
+
 import java.io.StreamTokenizer
 
 fun main() = with(StreamTokenizer(System.`in`.bufferedReader())) {
-    fun i(): Int { nextToken(); return nval.toInt() }
+    fun i(): Int {
+        nextToken(); return nval.toInt()
+    }
 
-    //1
-    val n = i()
-    val h = i()
-    val bottom = IntArray(h + 1)
-    val top = IntArray(h + 1)
-
-    //2
-    repeat(n) { idx ->
-        val num = i()
-        if (idx % 2 == 0) {
-            bottom[num]++
+    val n = i(); val h = i()
+    val line = IntArray(h)
+    repeat(n){
+        val size = i()
+        if (it % 2 == 0){
+            line[h - size]++
         } else {
-            top[num]++
+            line[0]++
+            line[size] -= 1
         }
     }
 
-    //3
-    for (i in h - 1 downTo 1) {
-        bottom[i] += bottom[i + 1]
-        top[i] += top[i + 1]
+    for(i in 1 until h){
+        line[i] += line[i - 1]
     }
 
-    //4
-    var min = Int.MAX_VALUE
-    var count = 0
-    for (height in 1..h) {
-        val crush = bottom[height] + top[h - height + 1] // 현재 높이에서 충돌하는 장애물 수
-
-        when {
-            crush < min -> {
-                min = crush
-                count = 1
-            }
-
-            crush == min -> {
-                count++
-            }
+    val ans = line.min()
+    var cnt = 0
+    for(i in line){
+        if(i == ans){
+            cnt+=1
         }
     }
-
-    //5
-    println("$min $count")
+    print("$ans $cnt")
 }
