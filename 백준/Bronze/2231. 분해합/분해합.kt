@@ -6,7 +6,8 @@ fun main() = with(StreamTokenizer(System.`in`.bufferedReader())) {
 
     val n = i()
     var min = Int.MAX_VALUE
-    for(i in 1 .. n) {
+    val start = maxOf(1, n - 9 * n.toString().length)
+    for(i in start .. n) {
         var num = i
         var sum = 0
         while(true){
@@ -20,7 +21,7 @@ fun main() = with(StreamTokenizer(System.`in`.bufferedReader())) {
             min = min(min, i)
         }
     }
-    
+
     if(min == Int.MAX_VALUE) {
         print(0)
     } else {
