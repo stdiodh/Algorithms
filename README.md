@@ -5,6 +5,24 @@
 
 ---
 
+## 📖 레포지토리 소개
+
+이 레포지토리는 **Kotlin**을 주 언어로 사용하여 알고리즘 문제를 풀이하는 저장소입니다.
+
+### 주요 특징
+
+- **BOJ Hub 연동**: Chrome Extension인 BOJ Hub를 통해 자동으로 커밋되는 문제 풀이와 수동으로 작성한 레거시 코드가 공존합니다.
+- **체계적인 구조**: 알고리즘 유형별로 분류된 디렉토리 구조를 통해 문제를 효율적으로 관리합니다.
+- **문서화**: 각 문제마다 `docs.md` 파일을 통해 접근법, 알고리즘 분류, 복잡도를 기록합니다.
+
+### 문제 풀이 철학
+
+- **Clean Code**: 직관적인 변수명과 명확한 로직 구조를 지향합니다.
+- **기본에 충실**: 화려한 기법보다는 문제의 본질을 이해하고 기본적인 자료구조와 알고리즘을 활용합니다.
+- **지속적인 학습**: 문제 해결 과정에서 얻은 인사이트를 문서화하여 지식으로 축적합니다.
+
+---
+
 ### 🛠️ 문제풀이 언어 및 프로필 (Solve language & Profile)
 
 -   **Solve language**
@@ -33,8 +51,29 @@
 
 -   **시작일**: `Commits on Mar 12, 2025`
 -   **플랫폼**:
-    -   [**백준 (Baekjoon Online Judge)**](./BAEKJOON)
-    -   [**프로그래머스 (Programmers)**](./PROGRAMMERS)
+    -   [**백준 (Baekjoon Online Judge)**](./백준) - BOJ Hub를 통해 자동 관리
+    -   [**프로그래머스 (Programmers)**](./프로그래머스) - BOJ Hub를 통해 자동 관리
+
+### 📁 디렉토리 구조
+
+```
+src/
+├── graph/              # 그래프 알고리즘 (BFS, DFS)
+├── dynamic-programming/  # 동적 프로그래밍
+├── greedy/             # 그리디 알고리즘
+├── data-structure/     # 자료구조 (스택, 큐, 힙, 해시맵 등)
+├── binary-search/      # 이진 탐색
+├── two-pointer/        # 투 포인터
+├── sliding-window/     # 슬라이딩 윈도우
+├── prefix-sum/         # 누적합
+├── sort/               # 정렬
+├── string/             # 문자열 처리
+├── math/               # 수학
+├── implementation/     # 구현
+├── parsing/            # 파싱
+├── learning/           # 학습용 코드
+└── programmers-legacy/ # 레거시 프로그래머스 문제
+```
 
 ---
 
@@ -43,5 +82,11 @@
 문제 해결 과정에서 얻은 깊은 깨달음이나 중요하다고 생각되는 내용은 블로그에 기록하고 있습니다.
 
 -   🔗 **[My Tech Blog](https://velog.io/@stdiodh/series/%EB%A7%A43PS) 문제 해결 원칙과 성장 기록**
+
+---
+
+### 📝 커밋 컨벤션
+
+이 레포지토리는 일관된 커밋 메시지를 위해 [AngularJS Git Commit Message Conventions](./COMMIT_CONVENTION.md)을 따릅니다.
 
 ---
