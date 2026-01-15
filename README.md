@@ -13,7 +13,7 @@
 
 - **BOJ Hub 연동**: Chrome Extension인 BOJ Hub를 통해 자동으로 커밋되는 문제 풀이와 수동으로 작성한 레거시 코드가 공존합니다.
 - **체계적인 구조**: 알고리즘 유형별로 분류된 디렉토리 구조를 통해 문제를 효율적으로 관리합니다.
-- **문서화**: 각 문제마다 `docs.md` 파일을 통해 접근법, 알고리즘 분류, 복잡도를 기록합니다.
+- **문서화**: 각 알고리즘 카테고리별로 개념 설명 문서(`{CategoryName}.md`)를 제공합니다.
 
 ### 문제 풀이 철학
 
@@ -59,9 +59,15 @@
 ```
 src/
 ├── graph/              # 그래프 알고리즘 (BFS, DFS)
+│   ├── bfs/            # BFS 문제
+│   └── dfs/            # DFS 문제
 ├── dynamic-programming/  # 동적 프로그래밍
 ├── greedy/             # 그리디 알고리즘
-├── data-structure/     # 자료구조 (스택, 큐, 힙, 해시맵 등)
+├── data-structure/     # 자료구조
+│   ├── stack/          # 스택
+│   ├── queue/          # 큐
+│   ├── priority-queue/ # 우선순위 큐
+│   └── hash-map/       # 해시맵
 ├── binary-search/      # 이진 탐색
 ├── two-pointer/        # 투 포인터
 ├── sliding-window/     # 슬라이딩 윈도우
@@ -70,9 +76,14 @@ src/
 ├── string/             # 문자열 처리
 ├── math/               # 수학
 ├── implementation/     # 구현
-├── parsing/            # 파싱
-├── learning/           # 학습용 코드
-└── programmers-legacy/ # 레거시 프로그래머스 문제
+│   ├── boj/            # BOJ 구현 문제
+│   └── programmers/    # 프로그래머스 문제
+│       ├── implementation/
+│       ├── string/
+│       ├── math/
+│       ├── java/
+│       └── lv2/
+└── parsing/            # 파싱
 ```
 
 ---
@@ -87,6 +98,11 @@ src/
 
 ### 📝 커밋 컨벤션
 
-이 레포지토리는 일관된 커밋 메시지를 위해 [AngularJS Git Commit Message Conventions](./COMMIT_CONVENTION.md)을 따릅니다.
+이 레포지토리는 일관된 커밋 메시지를 위해 [AngularJS Git Commit Message Conventions](./docs/COMMIT_CONVENTION.md)을 따릅니다.
+
+### 📚 문서
+
+- [커밋 컨벤션](./docs/COMMIT_CONVENTION.md): Git 커밋 메시지 작성 규칙
+- [Cursor 작업 프로세스](./docs/CURSOR_WORKFLOW.md): Cursor AI를 통한 자동 파일 정리 가이드
 
 ---
