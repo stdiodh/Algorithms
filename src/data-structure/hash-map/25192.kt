@@ -1,4 +1,4 @@
-package BOJ.sort
+package BOJ.hashMap
 
 fun main() {
     val br = System.`in`.bufferedReader()
