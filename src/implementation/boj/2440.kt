@@ -4,10 +4,12 @@ fun main() = with(StreamTokenizer(System.`in`.bufferedReader())){
     fun i() : Int { nextToken(); return nval.toInt() }
 
     val n = i()
-    for(i in n .. 1) {
+    val sb = StringBuilder()
+    for(i in n downTo 1) {
         repeat(i){
-            print("*")
+            sb.append("*")
         }
-        println()
+        sb.appendLine()
     }
+    print(sb)
 }
