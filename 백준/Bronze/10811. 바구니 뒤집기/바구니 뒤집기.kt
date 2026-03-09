@@ -1,26 +1,20 @@
-import java.util.Scanner
+import java.io.StreamTokenizer
 
-fun main() {
-    val sc = Scanner(System.`in`)
-    val n = sc.nextInt()
-    val m = sc.nextInt()
-    val array = IntArray(n) {it + 1}
-    val result = StringBuilder()
+fun main() = with(StreamTokenizer(System.`in`.bufferedReader())) {
+    fun nextInt() : Int { nextToken(); return nval.toInt() }
 
-    for (x in 0 until m){
-        var i = sc.nextInt() - 1
-        var j = sc.nextInt() - 1
+    val n = nextInt(); val m = nextInt()
 
-        while (i < j)
-        {
-            val temp = array[i]
-            array[i++] = array[j]
-            array[j--] = temp
+    val intArr = IntArray(n) { it+1 }
+    repeat(m) {
+        var i = nextInt() - 1; var j = nextInt() - 1
+
+        while(i < j) {
+            val temp = intArr[i]
+            intArr[i++] = intArr[j]
+            intArr[j--] = temp
         }
     }
 
-    for (y in array)
-        result.append("$y ")
-
-    println(result)
+    intArr.forEach { print("$it ") }
 }
