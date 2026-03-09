@@ -1,21 +1,27 @@
 import java.io.StreamTokenizer
 
-fun main() = with(StreamTokenizer(System.`in`.bufferedReader())){
-    fun nextInt() : Int {
-        nextToken()
-        return nval.toInt()
-    }
+fun main() = with(StreamTokenizer(System.`in`.bufferedReader())) {
+    fun nextInt() : Int { nextToken(); return nval.toInt() }
 
     val n = nextInt(); val m = nextInt()
-
-    val arr1 = Array(n) { IntArray(m) {nextInt()} }
-    val arr2 = Array(n) { IntArray(m) {nextInt()} }
-
     val sb = StringBuilder()
-    repeat(n){idx ->
-        repeat(m){jdx ->
-            sb.appendLine(arr1[idx][jdx] + arr2[idx][jdx])
+
+    val matrix1 = Array(n) { IntArray (m) { nextInt() } }
+    val matrix2 = Array(n) { IntArray (m) { nextInt() } }
+    val sumMatrix = Array(n) { IntArray(m) { 0 } }
+
+    for(i in 0 ..< n) {
+        for(j in 0 ..< m) {
+            sumMatrix[i][j] = matrix1[i][j] + matrix2[i][j]
         }
     }
-    println(sb)
+
+    for(i in 0 ..< n) {
+        for(j in 0 ..< m) {
+            sb.append("${sumMatrix[i][j]} ")
+        }
+        sb.appendLine()
+    }
+
+    print(sb)
 }
