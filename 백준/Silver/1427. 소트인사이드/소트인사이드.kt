@@ -1,15 +1,6 @@
-import java.io.StreamTokenizer
-
-fun main() = with(StreamTokenizer(System.`in`.bufferedReader())) {
-    fun readInt(): Int {
-        nextToken(); return nval.toInt()
-    }
-
-    fun readString(): String {
-        nextToken(); return sval
-    }
-
-    val num = readInt().toString().toCharArray()
+fun main() {
+    val br = System.`in`.bufferedReader()
+    val num = br.readLine().toCharArray()
 
     for(i in 0 .. num.size - 1) {
         for(j in i until num.size) {
@@ -21,5 +12,5 @@ fun main() = with(StreamTokenizer(System.`in`.bufferedReader())) {
         }
     }
 
-    print(num.joinToString(""))
+    print(num)
 }
