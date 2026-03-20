@@ -12,15 +12,13 @@ fun main() = with(StreamTokenizer(System.`in`.bufferedReader())) {
     val num = readInt().toString().toCharArray()
 
     for(i in 0 .. num.size - 1) {
-        var minIdx = i
         for(j in i until num.size) {
-            if(num[minIdx] < num[j]) {
-                minIdx = j
+            if(num[i] < num[j]) {
+                val temp = num[i]
+                num[i] = num[j]
+                num[j] = temp
             }
         }
-        val temp = num[minIdx]
-        num[minIdx] = num[i]
-        num[i] = temp
     }
 
     print(num.joinToString(""))
